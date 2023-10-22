@@ -12,4 +12,4 @@ class Person implements IPerson {
 }
 
 let myName = new Person("Nolan", "Berryhill");
-console.log(`My name is ${myName.firstName} ${myName.lastName}`)
+console.log(`My name is ${myName.firstName} ${myName.lastName}`);
