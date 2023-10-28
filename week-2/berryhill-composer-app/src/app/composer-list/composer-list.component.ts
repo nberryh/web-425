@@ -28,6 +28,7 @@ export class ComposerListComponent {
   // Create array
   composers: Array<Composer>;
 
+  // Create new composers
   constructor() {
     this.composers = [
       new Composer('Wolfgang Amadeus Mozart', 'Classical'),
