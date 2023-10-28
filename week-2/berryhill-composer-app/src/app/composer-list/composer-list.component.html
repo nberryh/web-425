@@ -1,1 +1,32 @@
-<p>composer-list works!</p>
+<!-- Name: Nolan Berryhill
+File: composer-list.component.html
+Description: HTML file for the composer list component
+Date: 10/29/2023-->
+
+<!-- Create Table -->
+<div class="container">
+
+  <div class="row">
+    <h2>Composer List</h2>
+    <br /><br />
+    <!-- Create Table -->
+    <div>
+      <table class="table">
+        <thead>
+          <!-- Titles -->
+          <tr>
+            <th class="col-md-5">Full Name</th>
+            <th class="col-md-5">Genre</th>
+          </tr>
+        </thead>
+        <!-- Body of the table -->
+        <tbody>
+          <tr *ngFor="let composer of composers">
+            <td>{{ composer.fullName }}</td>
+            <td>{{ composer.genre }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
