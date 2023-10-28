@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'enhanced-profile-app';
+  // isLoggedIn defined data type
+  isLoggedIn: Boolean = true;
+  assignment: string = 'Assignment 2.3 - Data Binding';
 }
+
