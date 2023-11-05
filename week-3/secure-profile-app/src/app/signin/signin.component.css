@@ -1,0 +1,11 @@
+/* Name: Nolan Berryhill
+File: signin.component.css
+Description: CSS for signin component
+Date: 11/05/2023 */
+
+/* styles for signin-container */
+.signin-container {
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 10%;
+}

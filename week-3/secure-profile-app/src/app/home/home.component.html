@@ -1,7 +1,7 @@
 <!-- Name: Nolan Berryhill
-File: app.component.html
-Description: HTML file for the my enhance profile app
-Date: 10/29/2023-->
+File: home.component.html
+Description: HTML file for the my home component
+Date: 11/05/2023-->
 
 <!-- navBar -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
@@ -25,10 +25,12 @@ Date: 10/29/2023-->
 <!-- Body of my profile app-->
 <div class="container">
 
+  <!-- Header for home component-->
   <br /><br />
-  <h2 class="text-center"> Exercise 3.3 - Passing Data to Routes, Part 2 </h2>
+  <h2 class="text-center"> {{ assignment }} </h2>
   <br /><br />
-  <div class="row">
+  <!-- Image and my details for home component-->
+  <div class="row" *ngIf="isLoggedIn; else showError">
     <div class="col-md-4">
       <app-my-image></app-my-image>
     </div>
@@ -37,6 +39,7 @@ Date: 10/29/2023-->
     </div>
   </div>
 
+  <!-- ng template for showError-->
   <ng-template #showError>
     <div class="row">
       <div class="col-12">

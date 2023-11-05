@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  // isLoggedIn defined data type
-
-  assignment: string = 'Assignment 2.3 - Data Binding';
 }
 
