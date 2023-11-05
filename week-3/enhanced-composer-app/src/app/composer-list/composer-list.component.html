@@ -10,10 +10,10 @@ Date: 11/05/2023-->
     <h2>Composer List</h2>
     <br /><br />
     <!-- Create Table -->
-    <div>
-      <table class="table">
+    <div class="col-sm-12">
+      <table class="table table-bordered">
         <thead class="thead-dark">
-          <!-- Titles -->
+          <!-- Titles of columns -->
           <tr>
             <th scope="col">Composer ID</th>
             <th scope="col">Full Name</th>
@@ -23,12 +23,15 @@ Date: 11/05/2023-->
         <!-- Body of the table -->
         <tbody>
           <tr *ngFor="let composer of composers">
+            <!-- Link to composer details -->
             <td scope="row">
-              <a routeLink="/composer-details/{{ composer.composerId }}">
+              <a routerLink="/composer-details/{{ composer.composerId }}">
                 {{ composer.composerId }}
               </a>
             </td>
-            <td>{{ composer.fullName }}</td>
+            <!-- Name of composer -->
+            <td scope="row">{{ composer.fullName }}</td>
+            <!-- Genre of Composer -->
             <td>{{ composer.genre }}</td>
           </tr>
         </tbody>

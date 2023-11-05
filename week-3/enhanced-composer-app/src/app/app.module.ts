@@ -1,3 +1,9 @@
+// Name: Nolan Berryhill
+// File: app.module.ts
+// Description: TypeScript for the App Module
+// Date: 11/05/2023
+
+// Imports component for app
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +15,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ComposerDetailsComponent } from './composer-details/composer-details.component';
 import { RouterModule } from '@angular/router';
 
+// Creates and export the app component
 @NgModule({
   declarations: [
     AppComponent,

@@ -10,6 +10,7 @@ import { IComposer } from './composer.interface';
 export class Composer {
   composers: Array<IComposer>;
 
+  // Create the composers list
   constructor() {
     this.composers = [
       {
@@ -30,10 +31,12 @@ export class Composer {
     ]
   }
 
+  // Create getComposers for return
   getComposers() {
     return this.composers;
   }
 
+  // Gives limits for getComposers
   getComposer(composerId: number) {
     for (let composer of this.composers) {
       if (composer.composerId === composerId) {

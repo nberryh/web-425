@@ -1,7 +1,7 @@
 // Name: Nolan Berryhill
-// File: composer-list.module.ts
+// File: composer-list.component.ts
 // Description: TypeScript for the composer list
-// Date: 10/29/2023
+// Date: 11/05/2023
 
 // import component, IComposer, Composer
 import { Component, OnInit } from '@angular/core';
@@ -19,7 +19,7 @@ import { Composer } from '../composer.class';
 export class ComposerListComponent implements OnInit {
 
   //Interface from IComposer
-  composers: Array<IComposer>
+  composers: Array<IComposer>;
 
   // Create constructor for composers
   constructor() {
