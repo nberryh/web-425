@@ -5,17 +5,8 @@
 
 // import
 import { Component, OnInit } from '@angular/core';
-
-// export Composer
-export class Composer {
-  fullName: string;
-  genre: string;
-
-  constructor(fullName: string, genre: string) {
-    this.fullName = fullName;
-    this.genre = genre;
-  }
-}
+import { IComposer } from '../composer.interface';
+import { Composer } from '../composer.class';
 
 // at Component
 @Component({
@@ -26,18 +17,14 @@ export class Composer {
 
 // Export ComposerListComponent
 export class ComposerListComponent {
-  // Create array
-  composers: Array<Composer>;
+
 
   // Create new composers
   constructor() {
-    this.composers = [
-      new Composer('Wolfgang Amadeus Mozart', 'Classical'),
-      new Composer('John Adams', 'Classical'),
-      new Composer('Laurie Anderson', "Modern"),
-      new Composer('Trisha Brown', 'Choregrapher'),
-      new Composer('dietrich Buxtehude', 'Classical')
-    ];
+    this.composers = new Composer().getComposers();
+  }
+
+  ngOnInit(): void {
   }
 
 
