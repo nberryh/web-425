@@ -17,6 +17,7 @@ export class Composer {
   }
 }
 
+// at Component
 @Component({
   selector: 'app-composer-list',
   templateUrl: './composer-list.component.html',
