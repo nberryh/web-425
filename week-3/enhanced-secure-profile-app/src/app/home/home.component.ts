@@ -15,12 +15,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
-  assignment: string = 'Exercise 3.3 - Passing Data to Routes, Part 2';
-
-  isLoggedIn: Boolean;
-  constructor(private route: ActivatedRoute) {
-    this.isLoggedIn = Boolean(this.route.snapshot.queryParamMap.get('isLoggedIn'));
-  }
+  assignment: string = 'Exercise 3.4 - Guarding Routes';
 
   ngOnInit(): void {
   }

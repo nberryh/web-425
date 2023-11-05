@@ -7,6 +7,7 @@
 import { HomeComponent } from './home/home.component';
 import { Routes } from '@angular/router';
 import { SigninComponent } from './signin/signin.component';
+import { SignInGuard } from './sign-in.guard';
 
 // Export AppRoutes
 export const AppRoutes: Routes = [
@@ -16,6 +17,7 @@ export const AppRoutes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [SignInGuard]
   }
 ]
