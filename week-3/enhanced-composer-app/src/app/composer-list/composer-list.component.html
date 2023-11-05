@@ -12,16 +12,22 @@ Date: 11/05/2023-->
     <!-- Create Table -->
     <div>
       <table class="table">
-        <thead>
+        <thead class="thead-dark">
           <!-- Titles -->
           <tr>
-            <th class="col-md-5">Full Name</th>
-            <th class="col-md-5">Genre</th>
+            <th scope="col">Composer ID</th>
+            <th scope="col">Full Name</th>
+            <th scope="col">Genre</th>
           </tr>
         </thead>
         <!-- Body of the table -->
         <tbody>
           <tr *ngFor="let composer of composers">
+            <td scope="row">
+              <a routeLink="/composer-details/{{ composer.composerId }}">
+                {{ composer.composerId }}
+              </a>
+            </td>
             <td>{{ composer.fullName }}</td>
             <td>{{ composer.genre }}</td>
           </tr>

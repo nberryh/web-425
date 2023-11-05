@@ -16,7 +16,7 @@ import { Composer } from '../composer.class';
 })
 
 // Export ComposerListComponent
-export class ComposerListComponent {
+export class ComposerListComponent implements OnInit {
 
 
   // Create new composers
