@@ -1,3 +1,9 @@
+// Name: Nolan Berryhill
+// File: composer.class.ts
+// Description: TypeScript for the composer class
+// Date: 11/05/2023
+
+// Import IComposer
 import { IComposer } from './composer.interface';
 
 // export Composer

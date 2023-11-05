@@ -3,12 +3,12 @@
 // Description: TypeScript for the composer list
 // Date: 10/29/2023
 
-// import
+// import component, IComposer, Composer
 import { Component, OnInit } from '@angular/core';
 import { IComposer } from '../composer.interface';
 import { Composer } from '../composer.class';
 
-// at Component
+// Creates and export the composer-list
 @Component({
   selector: 'app-composer-list',
   templateUrl: './composer-list.component.html',
@@ -18,8 +18,10 @@ import { Composer } from '../composer.class';
 // Export ComposerListComponent
 export class ComposerListComponent implements OnInit {
 
+  //Interface from IComposer
+  composers: Array<IComposer>
 
-  // Create new composers
+  // Create constructor for composers
   constructor() {
     this.composers = new Composer().getComposers();
   }
