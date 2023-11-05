@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/berryhill-composer-app",
+            "outputPath": "dist/enhanced-composer-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "berryhill-composer-app:build"
+            "browserTarget": "enhanced-composer-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "berryhill-composer-app:build:production"
+              "browserTarget": "enhanced-composer-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "berryhill-composer-app:build"
+            "browserTarget": "enhanced-composer-app:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "berryhill-composer-app:serve"
+            "devServerTarget": "enhanced-composer-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "berryhill-composer-app:serve:production"
+              "devServerTarget": "enhanced-composer-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "berryhill-composer-app",
+  "defaultProject": "enhanced-composer-app",
   "cli": {
     "analytics": false
   }
