@@ -1,0 +1,27 @@
+<!-- Name: Nolan Berryhill
+File: my-details.component.html
+Description: HTML file for the my details component
+Date: 10/29/2023-->
+
+<!-- Body -->
+<div class="container">
+
+  <!-- My List -->
+  <ul class="list-group">
+    <li class="list-group-item">
+      <strong>Name:</strong> Nolan Berryhill
+    </li>
+    <li class="list-group-item">
+      <strong>Favorite Food:</strong> Pizza
+    </li>
+    <li class="list-group-item">
+      <strong>Favorite Color:</strong> Yellow
+    </li>
+    <li class="list-group-item">
+      <strong>Keywords</strong>
+      <span *ngFor="let word of myProfile.keywords">
+        {{ word }}
+      </span>
+    </li>
+  </ul>
+</div>
