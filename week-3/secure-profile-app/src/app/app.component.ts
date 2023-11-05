@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   // isLoggedIn defined data type
-  isLoggedIn: Boolean = true;
+
   assignment: string = 'Assignment 2.3 - Data Binding';
 }
 
