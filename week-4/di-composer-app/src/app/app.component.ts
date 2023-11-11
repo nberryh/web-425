@@ -1,7 +1,7 @@
 // Name: Nolan Berryhill
 // File: app.component.ts
 // Description: TypeScript for the App Component
-// Date: 11/05/2023
+// Date: 11/12/2023
 
 // Import Component
 import { Component } from '@angular/core';
@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
 
 // export AppComponent
 export class AppComponent {
-  assignment: string = 'Exercise 3.2 - Passing data to Routes, Part 1';
+  assignment: string = 'Exercise 4.2 - Inversion of Control and Dependency Injection';
 }
