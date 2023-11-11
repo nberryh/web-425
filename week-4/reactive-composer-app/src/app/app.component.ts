@@ -15,5 +15,5 @@ import { Component } from '@angular/core';
 
 // export AppComponent
 export class AppComponent {
-  assignment: string = 'Exercise 4.2 - Inversion of Control and Dependency Injection';
+  assignment: string = 'Exercise 4.3 - Handling Form Events with Observables';
 }
