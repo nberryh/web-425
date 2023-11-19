@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'in-n-out-booksp1';
+  assignment: string;
+
+  constructor() {
+    this.assignment = 'Exercise 5.3 - Navigation and Layout'
+  }
 }
