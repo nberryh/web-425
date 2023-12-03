@@ -26,7 +26,7 @@ import { RouterModule } from '@angular/router';
     AuthLayoutComponent,
     BaseLayoutComponent,
     NotFoundComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +39,6 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
