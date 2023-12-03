@@ -7,11 +7,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BaseLayoutComponent } from './base-layout/base-layout.component';
-import { HomeComponent } from './home/home.component';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
 
-// Routes for routing paths
+// Routes
 const routes: Routes = [
   {
     path: '',
@@ -37,13 +37,11 @@ const routes: Routes = [
     path: '**',
     redirectTo: 'session/not-found'
   }
+
 ];
 
-// Imports and exports for NgModule
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-
-// Export the AppRoutingModule
-export class AppRoutingModule {}
+export class AppRoutingModule { }
