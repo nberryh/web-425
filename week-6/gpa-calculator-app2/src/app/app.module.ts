@@ -18,7 +18,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule} from '@angular/material/button';
-import { RouterModule } from '@angular/router';
+import { GpaComponent } from './gpa/gpa.component';
+import { GradeSummaryComponent } from './grade-summary/grade-summary.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatListModule } from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 
 // Declarations and imports for application
 @NgModule({
@@ -27,7 +33,9 @@ import { RouterModule } from '@angular/router';
     AuthLayoutComponent,
     BaseLayoutComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    GpaComponent,
+    GradeSummaryComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +45,13 @@ import { RouterModule } from '@angular/router';
     FlexLayoutModule,
     MatCardModule,
     MatButtonModule,
-    RouterModule
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+    FormsModule,
+    MatSelectModule
   ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
