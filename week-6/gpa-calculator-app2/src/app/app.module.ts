@@ -3,7 +3,6 @@
 // Date: 12/03/2023
 // Description: TS file for app
 
-// Imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -55,3 +54,4 @@ import { MatSelectModule } from '@angular/material/select';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

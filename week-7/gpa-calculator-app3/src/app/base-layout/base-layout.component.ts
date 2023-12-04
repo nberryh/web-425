@@ -6,7 +6,7 @@
 // Angular specific imports
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CookieService } from 'ngx-cookie-service/public-api';
+import { CookieService } from 'ngx-cookie-service';
 
 // Selector, template, styleUrls for component
 @Component({

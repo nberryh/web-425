@@ -12,6 +12,7 @@ import { ITranscript } from '../transcript.interface';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent {
   // Transcript variable
   transcriptEntry!: ITranscript

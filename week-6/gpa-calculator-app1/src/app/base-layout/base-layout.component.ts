@@ -1,5 +1,5 @@
 // Name: Nolan Berryhill
-// File: app.module.ts
+// File: base-layout.module.ts
 // Date: 12/03/2023
 // Description: TS file for base-layout
 
@@ -19,6 +19,6 @@ export class BaseLayoutComponent {
   assignment: string;
 
   constructor() {
-    this.assignment = 'Gpa Calculator, Part 1'
+    this.assignment = 'Exercise 6.3 - Layouts'
   }
 }
