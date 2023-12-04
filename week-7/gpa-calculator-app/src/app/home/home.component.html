@@ -1,0 +1,79 @@
+<!--
+  Title: home.component.html
+  Author: Nolan Berryhill
+  Date: 12/03/2023
+  Description: HTML for Home
+-->
+
+<div fxLayout="row" fxLayoutGap="20px">
+
+  <!-- Grade Form -->
+  <div fxFlex="50" class="grade-form">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Grade Entry</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <!-- Form field  -->
+        <form [formGroup]="transcriptForm" (ngSubmit)="onSubmit($event); transcriptForm.reset()">
+          <!-- Course Field -->
+          <mat-form-field>
+            <mat-label>Course</mat-label>
+            <input matInput id="txtCourse" formControlName="course">
+          </mat-form-field>
+
+          <!-- Grade Field -->
+          <mat-form-field style="padding-right: 5px;">
+            <mat-label>Grade</mat-label>
+            <mat-select formControlName="grade">
+              <mat-option *ngFor="let grade of selectableGrades" [value]="grade">{{ grade }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <!-- Save button -->
+          <button type="submit" [disabled]="!transcriptForm.valid" mat-raised-button color="primary">Save</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Grade Summary -->
+  <div fxFlex="50" class="grade-summary">
+    <mat-card>
+
+      <mat-card-header>
+        <mat-card-title>Transcript</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <app-grade-summary *ngFor="let entry of transcriptEntries" [course]="entry.course" [grade]="entry.grade"></app-grade-summary>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<!-- GPA Results -->
+<div fxLayout="column" fxLayoutGap="20px">
+  <div fxFlex class="gpa">
+
+    <!-- Calculate Results -->
+    <button mat-raised-button  color="primary" (click)="calculateResults()" style="margin-bottom: 5px;">Calculate Results</button>
+
+    <!-- Reset -->
+    <button mat-button color="primary" (click)="clearEntries()" style="margin-left: 5px">Clear Entries</button>
+
+    <!-- GPA Results -->
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title style="text-align:center;">GPA: <app-gpa [gpaTotal]="gpaTotal"></app-gpa></mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>
+
