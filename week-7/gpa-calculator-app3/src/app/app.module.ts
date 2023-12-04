@@ -1,4 +1,3 @@
-import { ReactiveFormsModule } from '@angular/forms';
 // Name: Nolan Berryhill
 // File: app.module.ts
 // Date: 12/03/2023
@@ -8,6 +7,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthLayoutComponent } from './auth-layout/auth-layout.component';
@@ -53,7 +53,8 @@ import { CookieService } from 'ngx-cookie-service';
     MatListModule,
     FormsModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
