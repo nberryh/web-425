@@ -1,0 +1,79 @@
+<!--
+  Title: home.component.html
+  Author: Nolan Berryhill
+  Date: 12/03/2023
+  Description: HTML for Home
+-->
+
+<div fxLayout="row" fxLayoutGap="20px">
+
+  <!-- Grade Entry -->
+  <div fxFlex="50" class="grade-form">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Grade Entry</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+
+        <!-- Form field for GPA entries -->
+        <form>
+          <!-- Course Field -->
+          <mat-form-field>
+            <mat-label>Course</mat-label>
+            <input matInput id="txtCourse" [(ngModel)]="transcriptEntry.course" name="course">
+          </mat-form-field>
+
+          <!-- Grade select -->
+          <mat-form-field style="padding-right: 5px;">
+            <mat-label>Grade</mat-label>
+            <mat-select [(ngModel)]="transcriptEntry.grade" name="selectGrade">
+              <mat-option *ngFor="let grade of selectableGrades" [value]="grade">{{ grade }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <button mat-raised-button color="primary" (click)="saveEntry()">Save</button>
+
+
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Grade Summary -->
+  <div fxFlex="50" class="grade-summary">
+    <mat-card>
+
+      <!-- Transcript -->
+      <mat-card-header>
+        <mat-card-title>Transcript</mat-card-title>
+      </mat-card-header>
+
+      <!-- App Grade Summary -->
+      <mat-card-content>
+        <app-grade-summary *ngFor="let entry of transcriptEntries" [course]="entry.course" [grade]="entry.grade"></app-grade-summary>
+      </mat-card-content>
+
+    </mat-card>
+  </div>
+</div>
+
+<br>
+<br>
+
+
+<!-- Results for GPA -->
+<div fxLayout="column" fxLayoutGap="20px">
+  <div fxFlex class="gpa">
+
+    <!-- Button for Calculate Results -->
+    <button mat-raised-button  color="primary" (click)="calculateResults()" style="margin-bottom: 5px;">Calculate Results</button>
+    <!-- Button for Clear Entries -->
+    <button mat-button color="primary" (click)="clearEntries()" style="margin-left: 5px">Clear Entries</button>
+    <mat-card>
+      <!-- GPA Totals -->
+      <mat-card-header>
+        <mat-card-title style="text-align:center;">GPA: <app-gpa [gpaTotal]="gpaTotal"></app-gpa></mat-card-title>
+      </mat-card-header>
+    </mat-card>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+/**
+  Title: sign-in.component.scss
+  Author: Nolan Berryhill
+  Date: 12/03/2023
+  Description: Styles for sign-in
+*/
+
+/**
+  Styles for sign-in
+*/
+.sign-in-container {
+  width: 35%;
+  margin: 15% auto;
+}
+
+/**
+  Styles for msg-error
+*/
+.msg-error {
+  margin: 10px 0;
+  padding: 10px;
+  color: #d8000C;
+  background-color: #FFD2D2;
+}
+
+/**
+  Styles for sign-in-container
+*/
+.sign-in-container > mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
